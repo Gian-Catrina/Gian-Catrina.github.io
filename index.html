@@ -6,127 +6,125 @@
 <title>Gian Catrina</title>
 
 <style>
-    body {
-        margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
-        background: linear-gradient(120deg, #0f172a, #020617);
-        color: white;
-        overflow-x: hidden;
-    }
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:linear-gradient(120deg,#020617,#0f172a);
+    color:white;
+}
 
-    header {
-        position: fixed;
-        width: 100%;
-        padding: 20px;
-        background: rgba(0,0,0,0.3);
-        backdrop-filter: blur(10px);
-    }
+nav{
+    position:fixed;
+    width:100%;
+    padding:20px;
+    backdrop-filter:blur(10px);
+    background:rgba(0,0,0,0.3);
+}
 
-    nav {
-        display: flex;
-        justify-content: space-between;
-        max-width: 1100px;
-        margin: auto;
-    }
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    animation:fade 1.5s ease;
+}
 
-    .hero {
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        text-align: center;
-        animation: fadeIn 1.5s ease;
-    }
+h1{
+    font-size:3rem;
+    margin:0;
+}
 
-    h1 {
-        font-size: 3rem;
-        margin: 0;
-    }
+.typing{
+    color:#38bdf8;
+    margin-top:10px;
+    font-size:1.3rem;
+    height:30px;
+}
 
-    .typing {
-        color: #38bdf8;
-        font-size: 1.2rem;
-        margin-top: 10px;
-    }
+.about{
+    max-width:700px;
+    margin:80px auto;
+    padding:40px;
+    background:rgba(255,255,255,0.05);
+    border-radius:20px;
+    backdrop-filter:blur(10px);
+    animation:fade 2s ease;
+}
 
-    .card {
-        background: rgba(255,255,255,0.05);
-        padding: 30px;
-        border-radius: 16px;
-        margin-top: 40px;
-        backdrop-filter: blur(10px);
-        transition: 0.3s;
-    }
+footer{
+    text-align:center;
+    padding:40px;
+    opacity:0.6;
+}
 
-    .card:hover {
-        transform: translateY(-10px);
-        background: rgba(255,255,255,0.1);
-    }
-
-    footer {
-        text-align: center;
-        padding: 40px;
-        opacity: 0.6;
-    }
-
-    @keyframes fadeIn {
-        from {opacity:0; transform: translateY(30px);}
-        to {opacity:1; transform: translateY(0);}
-    }
+@keyframes fade{
+    from{opacity:0;transform:translateY(30px);}
+    to{opacity:1;transform:translateY(0);}
+}
 </style>
 </head>
 
 <body>
 
-<header>
-    <nav>
-        <div><b>Gian Catrina</b></div>
-        <div>GitHub Pages</div>
-    </nav>
-</header>
+<nav>
+<b>Gian Catrina</b>
+</nav>
 
 <section class="hero">
     <h1>Hi, I'm Gian 👋</h1>
     <div class="typing" id="typing"></div>
+</section>
 
-    <div class="card">
-        <p>This is my personal GitHub Pages website.</p>
-        <p>Built during my IT training.</p>
-    </div>
+<section class="about">
+    <h2>About me</h2>
+    <p>
+        I'm currently in my first year of training as an IT apprentice in platform development.
+    </p>
+    <p>
+        In winter, I love skiing in the mountains.  
+        In summer, you'll probably find me riding my motorcycle.
+    </p>
+    <p>
+        When I'm not outside, I'm usually at the gym or learning new tech stuff.
+    </p>
 </section>
 
 <footer>
-    © 2026 Gian Catrina
+© 2026 Gian Catrina
 </footer>
 
 <script>
-const text = [
-  "IT Specialist in Training",
-  "Platform Development",
-  "Future DevOps Wizard 🚀"
+const words = [
+"IT Specialist in Training 💻",
+"Platform Development",
+"Future DevOps Engineer 🚀",
+"Always learning"
 ];
 
-let i = 0;
-let j = 0;
-let current = "";
-let isDeleting = false;
+let i=0;
+let j=0;
+let current="";
+let deleting=false;
 
-function type() {
-    document.getElementById("typing").textContent = current;
+function loop(){
+document.getElementById("typing").textContent=current;
 
-    if (!isDeleting && j < text[i].length) {
-        current += text[i][j++];
-    } else if (isDeleting && j > 0) {
-        current = current.slice(0, --j);
-    } else {
-        isDeleting = !isDeleting;
-        if (!isDeleting) i = (i + 1) % text.length;
-    }
-
-    setTimeout(type, isDeleting ? 40 : 80);
+if(!deleting && j<words[i].length){
+current+=words[i][j++];
 }
-type();
+else if(deleting && j>0){
+current=current.slice(0,--j);
+}
+else{
+deleting=!deleting;
+if(!deleting){i=(i+1)%words.length;}
+}
+
+setTimeout(loop,deleting?40:80);
+}
+loop();
 </script>
 
 </body>
