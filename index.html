@@ -2,54 +2,160 @@
 
 
 <!doctype html>
-<html lang="de">
+<html lang="en">
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width,initial-scale=1" />
-	<title>Gian Catrina — Platform Developer & Lehrperson</title>
-	<meta name="description" content="Gian Catrina — Platform Developer, Ausbilder im 1. Lehrjahr. Motorrad, Ski, Gym." />
+	<title>Gian Catrina — Platform Developer & Instructor</title>
+	<meta name="description" content="Gian Catrina — Platform Developer and instructor (Year 1). Motorcycle, skiing, gym." />
 	<style>
-		:root{--bg1:#0f1724;--bg2:#0b1220;--accent:#6ee7b7;--muted:#94a3b8}
-		html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial}
-		body{background:linear-gradient(120deg,var(--bg1),var(--bg2));color:#e6eef8;display:flex;align-items:center;justify-content:center}
-		.card{width:min(980px,94vw);background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.04);backdrop-filter:blur(6px);border-radius:14px;padding:40px;box-shadow:0 10px 30px rgba(2,6,23,0.6);overflow:hidden}
-		.hero{display:flex;gap:28px;align-items:center}
-		.portrait{width:140px;height:140px;border-radius:16px;background:linear-gradient(135deg,var(--accent),#60a5fa);flex-shrink:0;display:grid;place-items:center;font-weight:700;font-size:28px;color:#082024;box-shadow:0 8px 30px rgba(6,10,20,0.6);transform:translateY(0);animation:float 5s ease-in-out infinite}
-		@keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
-		.meta{flex:1}
-		h1{font-size:28px;margin:0 0 8px 0;letter-spacing:0.2px}
-		.role{font-size:16px;color:var(--muted);margin-bottom:18px;display:flex;gap:10px;align-items:center}
-		.rolespan{color:var(--accent);font-weight:600}
-		.typewriter{display:inline-block;overflow:hidden;border-right:2px solid rgba(255,255,255,0.12);white-space:nowrap;animation:typing 3.5s steps(30,end) infinite, blink .7s step-end infinite}
-		@keyframes typing{0%{width:0}50%{width:22ch}100%{width:0}}
-		@keyframes blink{50%{border-color:transparent}}
-		.bio{color:rgba(230,238,248,0.85);line-height:1.4;margin-bottom:18px}
-		.skills{display:flex;gap:10px;flex-wrap:wrap}
-		.chip{background:rgba(255,255,255,0.03);padding:8px 12px;border-radius:999px;border:1px solid rgba(255,255,255,0.03);color:var(--muted);font-weight:600;font-size:13px;display:inline-flex;gap:8px;align-items:center}
-		.interests{display:flex;gap:12px;margin-top:18px}
-		.interest{display:flex;flex-direction:column;align-items:center;gap:8px;padding:12px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.012),transparent);min-width:88px;text-align:center;transition:transform .35s,box-shadow .35s}
-		.interest:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(2,6,23,0.6)}
-		.interest .icon{font-size:28px}
-		.footer{display:flex;justify-content:space-between;align-items:center;margin-top:26px;color:var(--muted);font-size:14px}
-		.cta{background:linear-gradient(90deg,var(--accent),#60a5fa);color:#052022;padding:10px 14px;border-radius:10px;font-weight:700;text-decoration:none}
-		/* animated background shapes */
-		.bg-shape{position:absolute;right:-80px;top:-60px;width:260px;height:260px;background:radial-gradient(circle at 30% 30%, rgba(110,231,183,0.18), transparent 30%),linear-gradient(135deg,rgba(96,165,250,0.08),transparent);filter:blur(36px);transform:translateY(0);animation:move 8s ease-in-out infinite}
-		@keyframes move{0%{transform:translateY(0) rotate(0)}50%{transform:translateY(-18px) rotate(6deg)}100%{transform:translateY(0) rotate(0)}}
-		@media (max-width:720px){.hero{flex-direction:column;align-items:flex-start}.portrait{width:120px;height:120px}.bg-shape{display:none}}
+		:root{
+			--bg1: #0f1724;
+			--bg2: #0b1220;
+			--accent: #6ee7b7;
+			--muted: #94a3b8;
+		}
+
+		html, body{
+			height: 100%;
+			margin: 0;
+			font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+			background: linear-gradient(120deg, var(--bg1), var(--bg2));
+			color: #e6eef8;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.card{
+			width: min(980px, 94vw);
+			background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+			border: 1px solid rgba(255,255,255,0.04);
+			backdrop-filter: blur(6px);
+			border-radius: 14px;
+			padding: 40px;
+			box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+			overflow: hidden;
+		}
+
+		.hero{
+			display: flex;
+			gap: 28px;
+			align-items: center;
+		}
+
+		.portrait{
+			width: 140px;
+			height: 140px;
+			border-radius: 16px;
+			background: linear-gradient(135deg, var(--accent), #60a5fa);
+			flex-shrink: 0;
+			display: grid;
+			place-items: center;
+			font-weight: 700;
+			font-size: 28px;
+			color: #082024;
+			box-shadow: 0 8px 30px rgba(6,10,20,0.6);
+			animation: float 5s ease-in-out infinite;
+		}
+
+		@keyframes float{
+			0% { transform: translateY(0); }
+			50% { transform: translateY(-10px); }
+			100% { transform: translateY(0); }
+		}
+
+		.meta{ flex: 1; }
+
+		h1{ font-size: 28px; margin: 0 0 8px 0; }
+
+		.role{
+			font-size: 16px;
+			color: var(--muted);
+			margin-bottom: 18px;
+			display: flex;
+			gap: 10px;
+			align-items: center;
+		}
+
+		.rolespan{ color: var(--accent); font-weight: 600; }
+
+		.bio{ color: rgba(230,238,248,0.85); line-height: 1.4; margin-bottom: 18px; }
+
+		.skills{ display: flex; gap: 10px; flex-wrap: wrap; }
+
+		.chip{
+			background: rgba(255,255,255,0.03);
+			padding: 8px 12px;
+			border-radius: 999px;
+			border: 1px solid rgba(255,255,255,0.03);
+			color: var(--muted);
+			font-weight: 600;
+			font-size: 13px;
+			display: inline-flex;
+			gap: 8px;
+			align-items: center;
+		}
+
+		.interests{ display: flex; gap: 12px; margin-top: 18px; }
+
+		.interest{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 8px;
+			padding: 12px;
+			border-radius: 12px;
+			background: linear-gradient(180deg, rgba(255,255,255,0.012), transparent);
+			min-width: 88px;
+			text-align: center;
+			transition: transform .35s, box-shadow .35s;
+		}
+
+		.interest:hover{ transform: translateY(-6px); box-shadow: 0 12px 30px rgba(2,6,23,0.6); }
+		.interest .icon{ font-size: 28px; }
+
+		.footer{ display: flex; justify-content: space-between; align-items: center; margin-top: 26px; color: var(--muted); font-size: 14px; }
+		.cta{ background: linear-gradient(90deg, var(--accent), #60a5fa); color: #052022; padding: 10px 14px; border-radius: 10px; font-weight: 700; text-decoration: none; }
+
+		.bg-shape{
+			position: absolute;
+			right: -80px;
+			top: -60px;
+			width: 260px;
+			height: 260px;
+			background: radial-gradient(circle at 30% 30%, rgba(110,231,183,0.18), transparent 30%), linear-gradient(135deg, rgba(96,165,250,0.08), transparent);
+			filter: blur(36px);
+			transform: translateY(0);
+			animation: move 8s ease-in-out infinite;
+		}
+
+		@keyframes move{ 0%{transform:translateY(0) rotate(0)} 50%{transform:translateY(-18px) rotate(6deg)} 100%{transform:translateY(0) rotate(0)} }
+
+		@media (max-width:720px){
+			.hero{ flex-direction: column; align-items: flex-start; }
+			.portrait{ width: 120px; height: 120px; }
+			.bg-shape{ display: none; }
+		}
 	</style>
 </head>
 <body>
 	<div class="bg-shape" aria-hidden="true"></div>
+
 	<main class="card" role="main">
 		<section class="hero">
 			<div class="portrait" aria-hidden="true">GC</div>
+
 			<div class="meta">
 				<h1>Gian Catrina</h1>
-				<div class="role"><span class="rolespan">Platform Developer</span>
+
+				<div class="role">
+					<span class="rolespan">Platform Developer</span>
 					<span style="opacity:.7">•</span>
-					<span class="typewriter" aria-hidden="true">Lehrperson im 1. Lehrjahr • Motorrad • Ski • Gym</span>
+					<span>Instructor (Year 1) · Motorcycle · Skiing · Gym</span>
 				</div>
-				<p class="bio">Ich baue stabile Plattformen, unterstütze Lernende im ersten Lehrjahr und verbringe freie Zeit auf dem Motorrad, unterwegs auf der Piste oder im Gym. Diese Seite zeigt meine Arbeit, Interessen und Kontaktmöglichkeiten.</p>
+
+				<p class="bio">I build reliable platforms, mentor first-year apprentices, and spend free time riding motorcycles, skiing, or training at the gym. This page highlights my work, interests, and contact options.</p>
 
 				<div class="skills" aria-hidden="true">
 					<span class="chip">Deployment</span>
@@ -58,14 +164,14 @@
 					<span class="chip">Observability</span>
 				</div>
 
-				<div class="interests" aria-label="Interessen">
+				<div class="interests" aria-label="Interests">
 					<div class="interest">
 						<div class="icon">🏍️</div>
-						<div class="label">Motorrad</div>
+						<div class="label">Motorcycle</div>
 					</div>
 					<div class="interest">
 						<div class="icon">🎿</div>
-						<div class="label">Ski</div>
+						<div class="label">Skiing</div>
 					</div>
 					<div class="interest">
 						<div class="icon">🏋️‍♂️</div>
@@ -73,22 +179,18 @@
 					</div>
 					<div class="interest">
 						<div class="icon">👨‍🏫</div>
-						<div class="label">Lehren</div>
+						<div class="label">Teaching</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
 		<div class="footer">
-			<div>Mehr zu Projekten &amp; Kontakt auf <a class="cta" href="https://github.com/">GitHub</a></div>
+			<div>See projects & contact on <a class="cta" href="https://github.com/">GitHub</a></div>
 			<div style="color:var(--muted)">© <strong>Gian Catrina</strong></div>
 		</div>
 	</main>
 
-	<script>
-		// Enhance accessibility: remove typewriter border for screen readers
-		document.querySelectorAll('.typewriter').forEach(el=>{el.setAttribute('aria-hidden','true')});
-	</script>
 </body>
 </html>
 
